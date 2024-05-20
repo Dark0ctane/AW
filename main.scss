@@ -1,1 +1,60 @@
 @use './scss/base';
+$accent: #DBFB36;
+$bg: #050505;
+$text-neutral: #CCCCCC;
+$btn-background: #0F0F0F;
+
+body{
+    font-family: "Space Grotesk", sans-serif;
+    background-color: $bg;
+    color: $text-neutral;
+}
+
+
+// Components
+.btn{
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    gap: .5rem;
+    display: flex;
+    align-items: center;
+
+    img{
+        height: 2rem;
+        width: auto;
+        transition: transform 0.25s ease; /* Smooth transition for rotation */
+    }
+
+    &__primary{
+        background-color: $accent;
+        color: $bg;
+    }
+
+    &__secondary{
+        background-color: $btn-background;
+        color: $accent;
+    }
+}
+
+.logo{
+    height: 4rem;
+    width: auto;
+}
+
+// Sections
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin-inline: auto;
+    padding-block: 3rem;
+
+    &__links{
+        display: flex;
+        gap: 1.5rem;
+        padding: 1rem;
+        background-color: $btn-background;
+        border-radius: 3rem;
+    }
+}
