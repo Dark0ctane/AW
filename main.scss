@@ -1,8 +1,8 @@
 @use './scss/base';
-$accent: #DBFB36;
-$bg: #050505;
-$text-neutral: #CCCCCC;
-$btn-background: #0F0F0F;
+$clr-accent: #DBFB36;
+$clr-bg: #050505;
+$clr-neutral: #CCCCCC;
+$clr-btn-background: #0F0F0F;
 
 body{
     font-family: "Space Grotesk", sans-serif;
@@ -10,6 +10,10 @@ body{
     color: $text-neutral;
 }
 
+// Layout
+.flex-r-c{
+    
+}
 
 // Components
 .btn{
