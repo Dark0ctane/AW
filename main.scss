@@ -1,27 +1,161 @@
 @use './scss/base';
+@use './scss/components';
+
 $clr-accent: #DBFB36;
 $clr-bg: #050505;
 $clr-neutral: #CCCCCC;
 $clr-btn-background: #0F0F0F;
+$clr-divider: #272727;
 
 body{
     font-family: "Space Grotesk", sans-serif;
-    background-color: $bg;
-    color: $text-neutral;
+    background-color: $clr-bg;
+    color: $clr-neutral;
 }
 
-// Layout
-.flex-r-c{
-    
+h2,h3{
+    color: $clr-accent;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h1{
+    font-size: 3.625rem;
+    line-height: 150%;
+    color: white;
+}
+
+p{
+    font-size: 1.125rem;
 }
 
 // Components
+.card-three{
+    background-color: #0F0F0F;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .625rem;
+    border: 1px solid #1E1E1E;
+
+    &__top{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        p{
+            color: $clr-accent;
+        }
+    }
+
+    &__img{
+        width: 2rem;
+        height: auto;
+        background-color: $clr-bg;
+        padding: .25rem;
+        border-radius: .25rem;
+    }
+}
+
+.card-two{
+    background-color: #0F0F0F;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: .625rem;
+    border-left: 2px solid $clr-accent;
+}
+
+.card-one{
+    background-color: $clr-btn-background;
+    border-radius: .625rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    border: 1px solid #1E1E1E;
+
+    &__top{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        img{
+            height: 2rem;
+            width: auto;
+        }
+    }
+
+    &__mini-buttons{
+        display: flex;
+        gap: .5rem;
+    }
+}
+
+.mini-button{
+    background-color: #151515;
+        padding: .5rem;
+        border-radius: 3rem;
+}
+
+.container{
+    max-width: 1500px;
+    margin-inline: auto;
+    padding-block: 14rem;
+}
+
+.divider-line{
+    height: 1px;
+    border-bottom: 1px solid $clr-divider;
+    width: 100%;
+    display: inline-block;
+
+    &__accent{
+        border-bottom: 1px solid $clr-accent;
+    }
+}
+
+.logo{
+    height: 4rem;
+    width: auto;
+}
+
+.nav-link{
+    &:hover{
+        color: $clr-accent;
+        transition: color .5s;
+    }
+}
+
+.section-heading{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    max-width: 55rem;
+    margin-bottom: 5rem;
+
+    &__tag{
+        background-color: $clr-btn-background;
+        color: $clr-accent;
+        padding: .5rem;
+        border-radius: 1rem;
+    }
+}
+
 .btn{
     border-radius: 2rem;
     padding: .5rem 1rem;
     gap: .5rem;
     display: flex;
     align-items: center;
+    font-size: 1.125rem;
 
     img{
         height: 2rem;
@@ -30,19 +164,18 @@ body{
     }
 
     &__primary{
-        background-color: $accent;
-        color: $bg;
+        background-color: $clr-accent;
+        color: $clr-bg;
     }
 
     &__secondary{
-        background-color: $btn-background;
-        color: $accent;
+        background-color: $clr-btn-background;
+        color: $clr-accent;
     }
-}
 
-.logo{
-    height: 4rem;
-    width: auto;
+    &__card{
+        background-color: #151515;
+    }
 }
 
 // Sections
@@ -58,7 +191,64 @@ body{
         display: flex;
         gap: 1.5rem;
         padding: 1rem;
-        background-color: $btn-background;
+        background-color: $clr-btn-background;
         border-radius: 3rem;
+    }
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: 14rem;
+    max-width: 52rem;
+    margin-inline: auto;
+    text-align: center;
+
+    &__btns{
+        margin-top: .5rem;
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+.services{
+
+    &__cards{
+        display: flex;
+        gap: 4rem;
+    }
+}
+
+.features{
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        max-width: 45rem;
+    }
+}
+
+.process{
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2rem;
+        max-width: 55rem;
     }
 }

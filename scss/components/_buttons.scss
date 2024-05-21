@@ -1,0 +1,24 @@
+.btn{
+    border-radius: 2rem;
+    padding: .5rem 1rem;
+    gap: .5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+
+    img{
+        height: 2rem;
+        width: auto;
+        transition: transform 0.25s ease; /* Smooth transition for rotation */
+    }
+
+    &__primary{
+        background-color: $clr-accent;
+        color: $clr-bg;
+    }
+
+    &__secondary{
+        background-color: $clr-btn-background;
+        color: $clr-accent;
+    }
+}
