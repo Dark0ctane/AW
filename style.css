@@ -250,6 +250,12 @@ p {
 .btn__card {
   background-color: #151515;
 }
+.btn__price {
+  background-color: #151515;
+  width: 100%;
+  justify-content: center;
+  color: #DBFB36;
+}
 
 .nav {
   display: flex;
@@ -311,6 +317,51 @@ p {
   grid-template-rows: 1fr 1fr;
   gap: 2rem;
   max-width: 55rem;
+}
+
+.pricing__cards {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pricing-card {
+  width: 24rem;
+}
+.pricing-card__price {
+  font-size: 1.5rem;
+}
+.pricing-card__price span {
+  color: #CCC;
+  font-size: 1.125rem;
+}
+.pricing-card__feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pricing-card__feature img {
+  height: 1.5rem;
+  width: auto;
+}
+
+.our-work-card {
+  background-color: #0F0F0F;
+  border: 1px solid #1E1E1E;
+  display: inline-flex;
+  flex-direction: column;
+}
+.our-work-card__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0 0 1rem 1rem;
+}
+.our-work-card__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /*# sourceMappingURL=style.css.map */
